@@ -1,0 +1,20 @@
+@import './reset.css';
+
+@font-face {
+  font-family: sinteca;
+  src: url(../fonts/Sinteca-Medium.otf);
+}
+
+:root{
+  --main: #5D20D3;
+  --accent: #71E1E1;
+  --text: #222222; 
+  --background: #EEEEEE;
+  --gray: #919191;
+  --white: #FFFFFF;
+}
+
+*{
+  font-family: "sinteca";
+  font-weight: 400;
+}
