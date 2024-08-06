@@ -6,12 +6,14 @@
 }
 
 :root{
-  --main: #5D20D3;
+  --main: #A459D1;
   --accent: #71E1E1;
+  --helper: #F266AB;
   --text: #222222; 
   --background: #EEEEEE;
   --gray: #919191;
   --white: #FFFFFF;
+  --invert: #0000000;
 }
 
 *{
