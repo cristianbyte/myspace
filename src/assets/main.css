@@ -9,14 +9,21 @@
   --main: #A459D1;
   --accent: #71E1E1;
   --helper: #F266AB;
-  --text: #222222; 
-  --background: #EEEEEE;
-  --gray: #919191;
+  --text: #222222;
+  --background: #f4f7ff;
+  --shadow: #929fa788;
+  --gray: #929fa7;
   --white: #FFFFFF;
-  --invert: #0000000;
+  --invert: #000000;
 }
 
 *{
   font-family: "sinteca";
   font-weight: 400;
+}
+
+.icon{
+  width: 1.2rem;
+  height: 1.2rem;
+  display: block;
 }

@@ -4,6 +4,9 @@
     import PaletteIcon from './icons/Palette.vue'
     import ConnectIcon from './icons/Connect.vue'
     import imageProfile from '/profile.jpeg'
+    import IconText from './IconText.vue'
+
+    const date = new Date().toLocaleDateString();
 
 </script>
 
@@ -16,18 +19,18 @@
             <div class="profile__data">
                 <h3> Jhonson Dae</h3>
                 <div class="profile__links">
-                    <span href="#" class="profile__link">
+                    <IconText>
                         <PaletteIcon class="icon" />
-                        <p>Colors</p>
-                    </span>
-                    <span href="#" class="profile__link">
-                        <CalendarIcon class="icon" />
-                        <p>Events</p>
-                    </span>
-                    <span href="#" class="profile__link">
+                        <p>color</p>
+                    </IconText>
+                    <IconText>
                         <LocationIcon class="icon" />
-                        <p>Location</p>
-                    </span>
+                        <p>Medellin, CO</p>
+                    </IconText>
+                    <IconText>
+                        <CalendarIcon class="icon" />
+                        <p>{{ date }}</p>
+                    </IconText>
                 </div>
             </div>
             <div class="profile__actions">
@@ -47,12 +50,11 @@
         display: flex;
         align-items: end;
         width: 80vw;
-        max-width: 1200px;
         background-image: conic-gradient(from -140deg at 60% 70%, var(--helper) 0% 35%, var(--accent) 45% 50%, var(--helper) 60% 95%) ;
         height: 30vh;
         border-radius: 5px;
         overflow: hidden;
-        box-shadow: 0 0 .5rem var(--gray);
+        box-shadow: 0 0 .5rem var(--shadow);
    }
 
    .profile{
@@ -67,7 +69,7 @@
    }
 
    .profile__image{
-        height: 100%;
+        height: calc(100% + 2vw);
         aspect-ratio: 1/1;
         object-fit: fill;
         transform: translateY(-40%);
@@ -92,11 +94,12 @@
 
     .profile__links{
         display: flex;
+        width: calc(100% - 18vw);
         flex-direction: row;
+        justify-content: start;
+        align-items: center;
         flex-wrap: wrap;
         gap: 1rem;
-        justify-content: space-between;
-        height: 20%;
     }
 
     .profile__link{
@@ -109,19 +112,6 @@
         gap: 5px;
     }
 
-    
-    .profile__link svg{
-        height: 20px;
-    }
-    
-    .profile__link{
-        fill: var(--gray);
-        color: var(--gray);
-    } 
-    .profile__link:hover {
-        color: var(--invert);
-        fill: var(--invert);
-    }
 
     .profile__actions{
         position: absolute;
