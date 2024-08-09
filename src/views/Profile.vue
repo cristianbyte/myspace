@@ -95,7 +95,7 @@
         display: flex;
         justify-content: start;
         align-items: start;
-        height: 100%;
+        height: max-content;
     }
 
     .about{

@@ -12,7 +12,7 @@
 
 <style>
     .teams{
-        height: 100%;
+        height: max-content;
     }
 
 </style>
