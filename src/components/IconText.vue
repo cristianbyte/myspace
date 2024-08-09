@@ -1,5 +1,5 @@
 <template>
-    <div class="icon__text">
+    <div :class="['icon__text', styleType]">
         <slot></slot>
     </div>
 </template>
@@ -23,4 +23,10 @@
         color: var(--invert);
         fill: var(--invert);
     }
+    
+    .tabs {
+        color: var(--shadow);
+        fill: var(--shadow);
+    }
+
 </style>
