@@ -10,9 +10,10 @@
 
 </script>
 
-<style>
+<style scoped>
     .teams{
-        height: max-content;
+        height: 100%;
+        width: 100%;
     }
 
 </style>

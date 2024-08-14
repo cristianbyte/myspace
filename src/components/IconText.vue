@@ -12,21 +12,19 @@
         align-items: center;
         gap: 5px;
         width: max-content;
-        font-size: .8rem;
-        color: var(--gray);
-        fill: var(--gray);
-        cursor: pointer;
-    }
-    
-
-    .icon__text:hover{
-        color: var(--invert);
-        fill: var(--invert);
+        font-size: .9rem;
+        color: var(--accent);
+        fill: var(--accent);
     }
     
     .tabs {
-        color: var(--shadow);
-        fill: var(--shadow);
+        color: var(--accent);
+        fill: var(--accent);
+    }
+
+    .tabs:hover{
+        color: var(--slate);
+        fill: var(--slate);
     }
 
 </style>

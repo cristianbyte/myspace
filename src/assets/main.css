@@ -6,15 +6,19 @@
 }
 
 :root{
-  --main: #A459D1;
-  --accent: #71E1E1;
-  --helper: #F266AB;
-  --text: #222222;
-  --background: #f4f7ff;
-  --shadow: #929fa788;
-  --gray: #929fa7;
-  --white: #FFFFFF;
-  --invert: #000000;
+  --slate: #7367f0;
+  --french: #ff3d77;
+  --orange: #ffa63d;
+  --blue: #338aff;
+  --aqua: #3cf0c5;
+  --base: #FFFFFF;
+
+  --text: #2f2b3d;
+  --slow: #2f2b3d50;
+  --hover: #2f2b3d15;
+  --accent: #2f2b3daa;
+  --shadow: #2f2b3d40;
+  --border: 6px;
 }
 
 *{
@@ -23,7 +27,7 @@
 }
 
 .icon{
-  width: 1.2rem;
-  height: 1.2rem;
-  display: block;
+  color: var(--accent);
+  width: 1.5rem;
+  height: 1.5rem;
 }

@@ -1,6 +1,8 @@
 <script setup lang="ts">
     import { ref, computed } from 'vue';
     import Banner from "./components/Banner.vue";
+    import Navbar from "./components/Navbar.vue";
+
     import Profile from "./views/Profile.vue";
     import Teams from "./views/Teams.vue";
     import IconText from "./components/IconText.vue";
@@ -24,7 +26,10 @@
 
 <template>
 
-  <Banner/>
+    <Navbar/>
+    
+
+    <Banner/>
 
     <div class="buttons">
         <button 
@@ -44,17 +49,22 @@
 
 </template>
 
-<style>
+<style >
+    body{
+        display: flex;
+        justify-content: center;
+        background-color: var(--base);
+    }
+
     .app{
-        width: 100vw;
-        height: 100vh;
-        padding: 2% 10%;
+        padding: 1.3rem 0;
+        width: 95vw;
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: start;
         flex-direction: column;
-        gap: 10px;
-        background-color: var(--background);
+        gap: 1.3rem;
     }
 
     .buttons{
@@ -66,23 +76,23 @@
     }
 
     .buttons__item{
-        transition: all 0.4s ease;
-        background-color: var(--background);
-        color: var(--shadow);
+        transition: all 0.2s ease;
+        background-color: transparent;
         border: none;
-        border-radius: 5px;
-        padding: 5px 10px;
+        border-radius: var(--border);
+        padding: 8px 20px;
         cursor: pointer;
+        color: var(--accent);
     }
 
     .buttons__item--active {
-        background-color: var(--main);
-        color: var(--white);
+        background-color: var(--slate);
+        color: var(--accent);
     }
 
     .buttons__item--active .tabs{
-        color: var(--white);
-        fill: var(--white);
+        color: var(--base);
+        fill: var(--base);
     }
 
 </style>

@@ -92,6 +92,7 @@
 <style scoped>
     .profile {
         width:  100%;
+        height: 100%;
         display: flex;
         justify-content: start;
         align-items: start;
@@ -103,10 +104,10 @@
         justify-content: start;
         align-items: start;
         gap: 10px;
-        width: 30%;
+        width: 35%;
         flex-direction: column;
         height: min-content;
-        color: var(--shadow);
+        color: var(--slow);
     }
     
     .about__about{
@@ -114,9 +115,9 @@
         padding: 5%;
         overflow: hidden;
         width: 100%;
-        background-color: var(--white);
-        box-shadow: 0 0 .5rem var(--shadow);
-        border-radius: 5px;
+        background-color: transparent;
+        border-radius: var(--border);
+        border: 1px var(--shadow) solid ;
     }
 
     .about__field::before{
@@ -132,7 +133,7 @@
     .about__about, .about__field{
         display: flex;
         flex-direction: column;
-        gap: 5px;
+        gap: 10px;
     }
     
     .about__field h4{
@@ -141,7 +142,14 @@
     }
 
     .about__field p{
-        font-size: .8rem;
-        color: var(--gray);
+        color: var(--accent);
+        font-size: .9rem;
+    }
+
+    @media (max-width: 800px) {
+        .about{
+            width: 100%;
+        }
+        
     }
 </style>
