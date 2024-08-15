@@ -16,7 +16,7 @@
   --text: #2f2b3d;
   --slow: #2f2b3d50;
   --hover: #2f2b3d15;
-  --accent: #2f2b3daa;
+  --accent: #666666;
   --shadow: #2f2b3d40;
   --border: 6px;
 }
@@ -28,6 +28,12 @@
 
 .icon{
   color: var(--accent);
+  stroke:var(--accent);
   width: 1.5rem;
   height: 1.5rem;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  display: none;
 }

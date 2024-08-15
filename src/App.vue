@@ -1,5 +1,5 @@
 <script setup lang="ts">
-    import { ref, computed } from 'vue';
+    import { ref, computed, markRaw } from 'vue';
     import Banner from "./components/Banner.vue";
     import Navbar from "./components/Navbar.vue";
 
@@ -9,10 +9,15 @@
     import Account from "./components/icons/Account.vue";
     import Team from "./components/icons/Team.vue";
 
+    // Mark the components as non-reactive
+    const AccountRaw = markRaw(Account);
+    const TeamRaw = markRaw(Team);
+
     const tabs = ref([
-        { name: "Profile", icon: Account, styleType: 'tabs' },
-        { name: "Teams", icon: Team, styleType: 'tabs' }
+        { name: "Profile", icon: AccountRaw, styleType: 'tabs' },
+        { name: "Teams", icon: TeamRaw, styleType: 'tabs' }
     ]);
+
     const activeComponent = ref('Profile');
 
     const componentMap = {
@@ -38,7 +43,7 @@
         @click='activeComponent = tab.name'
         :class="{'buttons__item': true, 'buttons__item--active': tab.name === activeComponent}" 
         >
-            <IconText :class="tab.styleType">
+            <IconText :styleType="tab.styleType">
                 <component :is="tab.icon" class="icon"/>
                 {{ tab.name }}
             </IconText>
@@ -50,10 +55,12 @@
 </template>
 
 <style >
+
     body{
         display: flex;
         justify-content: center;
         background-color: var(--base);
+        scroll-behavior: smooth;
     }
 
     .app{

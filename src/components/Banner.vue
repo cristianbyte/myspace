@@ -18,7 +18,7 @@
             <div class="profile__data">
                 <h3> Jhonson Dae</h3>
                 <div class="profile__links">
-                    <IconText>
+                    <IconText >
                         <PaletteIcon class="icon" />
                         <p>UX Designer</p>
                     </IconText>

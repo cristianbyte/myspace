@@ -1,5 +1,13 @@
+<script setup lang="ts">
+    import { defineProps } from 'vue';
+
+    const props = defineProps<{
+    styleType?: string // Definido como opcional
+    }>();
+</script>
+
 <template>
-    <div :class="['icon__text', styleType]">
+    <div :class="['icon__text', styleType ? styleType : '']">
         <slot></slot>
     </div>
 </template>
