@@ -21,4 +21,4 @@ template:
 
 ![Progress Desktop view](./src/assets/desktop.png "My Space")
 
-![Progress Phone view](./src/assets/mobile.png.png "My Space")
+![Progress Phone view](./src/assets/mobile.png "My Space")
